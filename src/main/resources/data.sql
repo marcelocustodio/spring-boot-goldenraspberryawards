@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS producer;
+
+CREATE TABLE producer (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	year_victory INT NOT NULL,
+	producer_name VARCHAR(500) NOT NULL
+)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<h1>RELATÓRIOS DE PRODUTORES VENCEDORES E SEUS RESPECTIVOS ANOS</h1>
+
+
+	<table border="1">
+		<th:block th:each="produtor : ${produtores}">
+			<tr>
+				<td th:text="${produtor.producer_name}">...</td>
+				<td th:text="${produtor.year_victory}">...</td>
+			</tr>
+		</th:block>
+	</table>
+
+	<h2>Nome do Produtor Com Maior Intervalo:
+	<span th:text="${nomeProdutorComMaiorDiferenca}" /></h2>
+	<br> 
+	
+	Maior Intervalo:
+	<span th:text="${maiorDiferenca}" />
+	<br>
+	
+	Ano Anterior Produtor Com Maior Intervalo:
+	<span th:text="${anoAnteriorProdutorComMaiorDiferenca}" />
+	<br>
+	
+	Ano Posterior Produtor Com Maior Intervalo:
+	<span th:text="${anoPosteriorProdutorComMaiorDiferenca}" />
+	<br>
+	
+	<h2>Nome Produtor Com Menor Intervalo:
+	<span th:text="${nomeProdutorComMenorDiferenca}" /></h2>
+	<br> 
+	
+	Menor Intervalo:
+	<span th:text="${menorDiferenca}" />
+	<br> 
+	
+	Ano Anterior Produtor Com Menor Intervalo:
+	<span th:text="${anoAnteriorProdutorComMenorDiferenca}" />
+	<br> 
+	
+	Ano Posterior Produtor Com Menor Intervalo:
+	<span th:text="${anoPosteriorProdutorComMenorDiferenca}" />
+	<br>
+
+</body>
+</html>
